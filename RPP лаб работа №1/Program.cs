@@ -92,7 +92,7 @@ namespace RPP_лаб_работа__1
                 Console.WriteLine(z);
             }
 
-            Console.ReadKey();
+             Console.ReadKey();
         }
     }
 }
