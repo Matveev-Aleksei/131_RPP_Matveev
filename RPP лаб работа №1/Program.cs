@@ -62,20 +62,37 @@ namespace RPP_лаб_работа__1
                     goto point;
                 }
 
+            // Использование оператора goto (7)
+            point1:
+            {
+                z--;
+                Console.WriteLine(z);
+            }
+            if (z > 0)
+            goto point1;
+            
+
             // Использование оператора while (9)
             while (z > 0)
-                {
-                    z--;
-                    Console.WriteLine(z);
-                }
+            {
+                z--;
+                Console.WriteLine(z);
+            }
+            // Использование оператора do while (9)
+            do
+            {
+                  z--;
+                Console.WriteLine(z);
+            }
+            while(z > 0);
 
             // Использование оператора for (10)
             for (i = z; z > 0; z--)
-                {
-                    Console.WriteLine(z);
-                }
+            {
+                Console.WriteLine(z);
+            }
 
-                Console.ReadKey();
+            Console.ReadKey();
         }
     }
 }
