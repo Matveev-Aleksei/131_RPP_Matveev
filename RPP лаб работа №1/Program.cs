@@ -10,14 +10,22 @@ namespace RPP_лаб_работа__1
     {
         static void Main(string[] args)
         {
+            // Объявление переменных (1)
             int x;
             int y;
             int i;
+
+            // Присваивание значений (2)
             x = 7;
             y = 9;
+
+            // Объявление и инициализация переменной z (3)
             int z = y + x;
+
+            // Вывод на экран z (4)
             Console.WriteLine(z);
 
+            // Проверка и выполнение условий (5)
             if (z > 0)
                 {
                     Console.WriteLine("z положительное ");
@@ -44,27 +52,30 @@ namespace RPP_лаб_работа__1
                     Console.WriteLine("Не кратно 5 ");
 
                 }
+            
+            // Использование оператора goto (7)
+            point:
+                if (z > 0)
+                {
+                    z--;
+                    Console.WriteLine(z);
+                    goto point;
+                }
 
-            //point:
-            //    if (z > 0)
-            //    {
-            //        z--;
-            //        Console.WriteLine(z);
-            //        goto point;
-            //    }
+            // Использование оператора while (9)
+            while (z > 0)
+                {
+                    z--;
+                    Console.WriteLine(z);
+                }
 
-            //while (z > 0)
-            //{
-            //    z--;
-            //    Console.WriteLine(z);
-            //}
-
+            // Использование оператора for (10)
             for (i = z; z > 0; z--)
-            {
-                Console.WriteLine(z);
-            }
+                {
+                    Console.WriteLine(z);
+                }
 
-             //   Console.ReadKey();
+                Console.ReadKey();
         }
     }
 }
