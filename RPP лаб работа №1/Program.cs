@@ -14,6 +14,12 @@ namespace RPP_лаб_работа__1
             int x;
             int y;
             int i;
+            int max = 8;
+            Random rnd1 = new Random();
+            int number = rnd1.Next(max);
+
+
+            int b = 0;
 
             // Присваивание значений (2)
             x = 7;
@@ -91,6 +97,36 @@ namespace RPP_лаб_работа__1
             {
                 Console.WriteLine(z);
             }
+
+            // Угадай число 
+            do
+            {
+                Console.WriteLine("Введите ваше число от 0 до 8");
+                int a = Convert.ToInt32(Console.ReadLine());
+
+                if (a > number)
+                {
+                    Console.WriteLine(a + " - Больше загаданного числа ");
+                }
+                else
+                {
+                    if (a < number)
+                    {
+                        Console.WriteLine("Загаданное число больше " + a);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Поздравляем... Вы угадали " + " Загаданное число  " + number);
+                        Console.ReadKey();
+                        Environment.Exit(0);
+                    }
+                }
+                b++;
+            }
+            while (b < 3);
+            Console.WriteLine("Не угадал, попробуй еще раз. " + "Загаданное число " + number);
+            Console.ReadKey();
+            
 
              Console.ReadKey();
         }
