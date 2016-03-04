@@ -128,6 +128,7 @@ namespace RPP_лаб_работа__1
             Console.ReadKey();
             
 
+
              Console.ReadKey();
         }
     }
