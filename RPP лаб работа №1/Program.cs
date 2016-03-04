@@ -14,6 +14,8 @@ namespace RPP_лаб_работа__1
             int x;
             int y;
             int i;
+            int t;
+            int b = 0;
             int max = 8;
             Random rnd1 = new Random();
             int number = rnd1.Next(max);
@@ -126,8 +128,44 @@ namespace RPP_лаб_работа__1
             while (b < 3);
             Console.WriteLine("Не угадал, попробуй еще раз. " + "Загаданное число " + number);
             Console.ReadKey();
-            
 
+
+           // Проверка 
+            Console.WriteLine("Введите температуру на дворе");
+            t = Convert.ToInt32(Console.ReadLine());
+            if (t < -20 || t > 40) //если температура меньше -20 или больше 40
+            {
+                Console.WriteLine("Вам лучше посидеть дома!");
+            }
+            else
+            {
+                Console.WriteLine("Можете идти гулять");
+            }
+
+            // Использования оператора for
+            for (b = 0; b < 3; b++)
+            {
+                Console.WriteLine("Введите ваше число от 0 до 8");
+                int a = Convert.ToInt32(Console.ReadLine());
+
+                if (a > number)
+                {
+                    Console.WriteLine(a + " - Больше загаданного числа ");
+                }
+                else
+                {
+                    if (a < number)
+                    {
+                        Console.WriteLine("Загаданное число больше " + a);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Поздравляем... Вы угадали " + " Загаданное число  " + number);
+                        Console.ReadKey();
+                        Environment.Exit(0);
+                    }
+                }
+            }
 
              Console.ReadKey();
         }
