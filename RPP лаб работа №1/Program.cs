@@ -14,12 +14,13 @@ namespace RPP_лаб_работа__1
             int x;
             int y;
             int i;
+            int f = 0;
             int t;
-            int b = 0;
             int max = 8;
             Random rnd1 = new Random();
             int number = rnd1.Next(max);
-
+            Random rnd12 = new Random();
+            int number1 = rnd12.Next(max);
 
             int b = 0;
 
@@ -142,30 +143,30 @@ namespace RPP_лаб_работа__1
                 Console.WriteLine("Можете идти гулять");
             }
 
-            // Использования оператора for
-            for (b = 0; b < 3; b++)
-            {
-                Console.WriteLine("Введите ваше число от 0 до 8");
-                int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Загадайте число от 1 до 8 ");
+            Console.ReadKey();
+            
+            Random rnd11 = new Random();
+            int number2 = rnd1.Next(max);
 
-                if (a > number)
-                {
-                    Console.WriteLine(a + " - Больше загаданного числа ");
-                }
-                else
-                {
-                    if (a < number)
+            Console.WriteLine("Ваше число " + number2 + " ? ");
+            
+            switch (e.Key)
+                case ConsoleKey.F1:
                     {
-                        Console.WriteLine("Загаданное число больше " + a);
+                       Console.WriteLine(" - Загаданное число больше");
                     }
-                    else
+                    break;
+                case ConsoleKey.F2:
                     {
-                        Console.WriteLine("Поздравляем... Вы угадали " + " Загаданное число  " + number);
-                        Console.ReadKey();
-                        Environment.Exit(0);
+                        Console.WriteLine(" - Загаданное число меньше");
                     }
-                }
-            }
+                    break;
+                case ConsoleKey.F3:
+                    {
+                        Console.WriteLine("Поздравляем... Вы угадали! ");
+                    }
+
 
              Console.ReadKey();
         }
