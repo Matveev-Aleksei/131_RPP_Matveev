@@ -181,6 +181,29 @@ namespace RPP_лаб_работа__1
                 Console.WriteLine("Я не угадал... Попробуем еще ? ");
             }
             
+            // Таблица 
+
+            //количество итераций внешнего цикла
+
+            int n = 10;
+
+            //количество итераций внутренного цикла
+
+            int m = 10;
+
+            //внешний цикл
+
+            for (int i = 1; i < n; i++)
+            {
+
+                for (int j = 1; j < m; j++)
+                {
+                    Console.Write(i * j);
+                    Console.Write("\t");
+                }
+                Console.WriteLine();
+            }
+            Console.ReadKey();
 
 
 
