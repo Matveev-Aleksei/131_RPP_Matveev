@@ -16,7 +16,7 @@ namespace RPP_лаб_работа__1
             int i;
             int f = 0;
             int t;
-            int max = 8;
+            int max = 4;
             Random rnd1 = new Random();
             int number = rnd1.Next(max);
             Random rnd12 = new Random();
@@ -102,70 +102,86 @@ namespace RPP_лаб_работа__1
             }
 
             // Угадай число 
+           // do
+           // {
+           //     Console.WriteLine("Введите ваше число от 0 до 8");
+           //     int a = Convert.ToInt32(Console.ReadLine());
+
+           //     if (a > number)
+           //     {
+           //         Console.WriteLine(a + " - Больше загаданного числа ");
+           //     }
+           //     else
+           //     {
+           //         if (a < number)
+           //         {
+           //             Console.WriteLine("Загаданное число больше " + a);
+           //         }
+           //         else
+           //         {
+           //             Console.WriteLine("Поздравляем... Вы угадали " + " Загаданное число  " + number);
+           //             Console.ReadKey();
+           //             Environment.Exit(0);
+           //         }
+           //     }
+           //     b++;
+           // }
+           // while (b < 3);
+           // Console.WriteLine("Не угадал, попробуй еще раз. " + "Загаданное число " + number);
+           // Console.ReadKey();
+
+
+           //// Проверка 
+           // Console.WriteLine("Введите температуру на дворе");
+           // t = Convert.ToInt32(Console.ReadLine());
+           // if (t < -20 || t > 40) //если температура меньше -20 или больше 40
+           // {
+           //     Console.WriteLine("Вам лучше посидеть дома!");
+           // }
+           // else
+           // {
+           //     Console.WriteLine("Можете идти гулять");
+           // }
+
+            Console.WriteLine("Загадайте число от 0 до 4 ");
+            Console.ReadKey();
+
             do
             {
-                Console.WriteLine("Введите ваше число от 0 до 8");
-                int a = Convert.ToInt32(Console.ReadLine());
+                Random rnd11 = new Random();
+                int number2 = rnd1.Next(max);
 
-                if (a > number)
+                Console.WriteLine("Ваше число " + number2 + " ? ");
+                ConsoleKeyInfo e = Console.ReadKey();
+
+                switch (e.Key)
                 {
-                    Console.WriteLine(a + " - Больше загаданного числа ");
+                    case ConsoleKey.F1:
+                        {
+                            Console.WriteLine(" - Загаданное число больше");
+                        }
+                        break;
+                    case ConsoleKey.F2:
+                        {
+                            Console.WriteLine(" - Загаданное число меньше");
+                        }
+                        break;
+                    case ConsoleKey.F3:
+                        {
+                            Console.WriteLine("Поздравляем... Вы угадали! ");
+                            Console.ReadKey();
+                            return;
+                        }
+                        break;
                 }
-                else
-                {
-                    if (a < number)
-                    {
-                        Console.WriteLine("Загаданное число больше " + a);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Поздравляем... Вы угадали " + " Загаданное число  " + number);
-                        Console.ReadKey();
-                        Environment.Exit(0);
-                    }
-                }
-                b++;
+                f++;
             }
-            while (b < 3);
-            Console.WriteLine("Не угадал, попробуй еще раз. " + "Загаданное число " + number);
-            Console.ReadKey();
-
-
-           // Проверка 
-            Console.WriteLine("Введите температуру на дворе");
-            t = Convert.ToInt32(Console.ReadLine());
-            if (t < -20 || t > 40) //если температура меньше -20 или больше 40
+            while (f < 3);
             {
-                Console.WriteLine("Вам лучше посидеть дома!");
+                Console.WriteLine("Я не угадал... Попробуем еще ? ");
             }
-            else
-            {
-                Console.WriteLine("Можете идти гулять");
-            }
-
-            Console.WriteLine("Загадайте число от 1 до 8 ");
-            Console.ReadKey();
             
-            Random rnd11 = new Random();
-            int number2 = rnd1.Next(max);
 
-            Console.WriteLine("Ваше число " + number2 + " ? ");
-            
-            switch (e.Key)
-                case ConsoleKey.F1:
-                    {
-                       Console.WriteLine(" - Загаданное число больше");
-                    }
-                    break;
-                case ConsoleKey.F2:
-                    {
-                        Console.WriteLine(" - Загаданное число меньше");
-                    }
-                    break;
-                case ConsoleKey.F3:
-                    {
-                        Console.WriteLine("Поздравляем... Вы угадали! ");
-                    }
 
 
              Console.ReadKey();
