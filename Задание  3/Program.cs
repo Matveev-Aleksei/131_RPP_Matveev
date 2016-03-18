@@ -244,7 +244,7 @@ namespace Задание__3
                 Console.Write(n[i]);
                 Console.Write("\t");
             }
-           
+            
            
             Console.ReadKey();
             
