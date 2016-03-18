@@ -8,6 +8,11 @@ namespace Задание__3
 {
     class Program
     {
+        static bool fun(int a, int b)
+        {
+            if (a * b >= 0) return true;
+            return false;
+        }
         static void Main(string[] args)
         {
            
@@ -165,34 +170,27 @@ namespace Задание__3
             Random rnd = new Random();
             int s = 0;
             int[] m = new int[10];
-            for (int i = 0; i < m.Length; i++)
+            for (int i = 1; i < m.Length; i++)
             {
-                m[i] = rnd.Next(-max, max);
+                m[i] = rnd.Next (-max, max);
             }
-            for (int i = 0; i < m.Length; i++)
+            for (int i = 1; i < m.Length; i++)
             {
                 Console.WriteLine(m[i]);
             }
 
-            for (int i = 0; i < m.Length; i++)
+
+            for (int i = 1; i < m.Length; i++)
             {
-                do
+                
+                if (fun(m[i], m[i-1]) == false)
                 {
-                    if (m[i] > 0)
-                    {
-                        Console.WriteLine("Число положительное ");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Число отрицательное ");
-                    }
-                    i++;
+                    s++; 
                 }
-
-
-                while (i < 10);
+                
             }
 
+            Console.WriteLine("Сумма равна " + s);
             
             Console.ReadKey();
 
