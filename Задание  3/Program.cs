@@ -10,8 +10,7 @@ namespace Задание__3
     {
         static bool fun(int a, int b)
         {
-            if (a * b >= 0) return true;
-            return false;
+            return (a * b >= 0);
         }
         static void Main(string[] args)
         {
@@ -127,22 +126,22 @@ namespace Задание__3
             ////Задание 6
             //int[] sample10;
             //sample10 = new int[200];
-            
-            //    for (int i = 100; i < sample10.Length; i--)
+
+            //for (int i = 100; i < sample10.Length; i--)
+            //{
+            //    if (i > 0)
             //    {
-            //        if (i >= 0)
+            //        sample10[i] = i;
+
+            //        if (sample10[i] % 3 == 0)
             //        {
-            //            sample10[i] = i;
-
-            //            if (sample10[i] % 3 == 0)
-            //            {
-            //                Console.WriteLine(sample10[i]);
-            //            }
-
+            //            Console.WriteLine(sample10[i]);
             //        }
+
             //    }
-            
-            
+            //}
+
+
             ////Задание 26
             //int max = 50;
             //Random rnd = new Random();
@@ -152,7 +151,7 @@ namespace Задание__3
             //{
             //    m[i] = rnd.Next(max);
 
-            //    if (m[i] % 2 == 1)
+            //    if (m[i] % 2 == 0)
             //    {
             //        s = s + m[i];
             //    }
@@ -165,38 +164,91 @@ namespace Задание__3
             //Console.WriteLine("s = " + s);
             //Console.ReadKey();
 
-            //Задание 46
+            ////Задание 46
+            //int max = 10;
+            //Random rnd = new Random();
+            //int s = 0;
+            //int[] m = new int[10];
+            //for (int i = 1; i < m.Length; i++)
+            //{
+            //    m[i] = rnd.Next(-max, max);
+            //}
+            //for (int i = 1; i < m.Length; i++)
+            //{
+            //    Console.WriteLine(m[i]);
+            //}
+
+
+            //for (int i = 1; i < m.Length; i++)
+            //{
+
+            //    if (m[i] *  m[i - 1] <0)    
+            //     //   (fun(m[i], m[i - 1]) == false)
+            //    {
+            //        s++;
+            //    }
+
+            //}
+
+            //Console.WriteLine("Сумма равна " + s);
+
+            //Console.ReadKey();
+
+            //int a = 11;
+            //int b = 22;
+            //int c = 33;
+            //int g = 44;
+            //int max = 50;
+            //Random rnd = new Random();
+
+            //int[] m = new int [50];
+           
+
+            //for (int i = 0; i < m.Length; i++)
+            //{
+            
+            //m[i] = rnd.Next(max);
+                
+            //}
+            //for (int i = 0; i < m.Length; i++)
+            //{
+            //    bool result = m[i] != a;
+            //    result = result & m[i] != b;
+            //    result = result & m[i] != c;
+            //    result = result & m[i] != g;
+            //    if (result)
+            //    {
+            //        Console.WriteLine(m[i]);
+            //    }
+            //}
+
+            //Console.ReadKey();
+
             int max = 10;
             Random rnd = new Random();
-            int s = 0;
-            int[] m = new int[10];
-            for (int i = 1; i < m.Length; i++)
+            int[] m = new int[5];
+            for (int i = 0; i < m.Length; i++)
             {
-                m[i] = rnd.Next (-max, max);
+                m[i] = rnd.Next(max);
             }
-            for (int i = 1; i < m.Length; i++)
+            for (int i = 0; i < m.Length; i++)
             {
-                Console.WriteLine(m[i]);
-            }
-
-
-            for (int i = 1; i < m.Length; i++)
-            {
-                
-                if (fun(m[i], m[i-1]) == false)
-                {
-                    s++; 
-                }
-                
+                Console.Write(m[i]);
+                Console.Write("\t");
             }
 
-            Console.WriteLine("Сумма равна " + s);
-            
+            int[] n = new int[5];
+            for (int i = 0; i < m.Length; i++)
+            {
+                n[i] = m[i];
+                Console.Write(n[i]);
+                Console.Write("\t");
+            }
+           
+           
             Console.ReadKey();
-
-
-
-                
+            
+    
         }
     }
 }
