@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPP лаб работа №
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Задание  3", "Задание  3\Задание  3.csproj", "{ED7EE9A6-F2C1-4534-BCC2-B87A22D02954}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Двумерные массивы", "Двумерные массивы\Двумерные массивы.csproj", "{B43FFD87-EDEA-4786-8459-8F08693038D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{ED7EE9A6-F2C1-4534-BCC2-B87A22D02954}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED7EE9A6-F2C1-4534-BCC2-B87A22D02954}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED7EE9A6-F2C1-4534-BCC2-B87A22D02954}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B43FFD87-EDEA-4786-8459-8F08693038D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B43FFD87-EDEA-4786-8459-8F08693038D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B43FFD87-EDEA-4786-8459-8F08693038D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B43FFD87-EDEA-4786-8459-8F08693038D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
